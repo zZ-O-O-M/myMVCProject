@@ -8,17 +8,26 @@
   <link rel="stylesheet" href="/css/bootstrap.css">
   <link rel="stylesheet" href="/css/font-awesome.min.css">
   <link rel="stylesheet" href="/css/style.css">
-  <title></title>
+  <title><?= $pageData['title'] ?></title>
 </head>
 <body>
 
-<form class="form" action="">
-  <label for="name">Name:</label>
-  <input type="text" id="name">
+<form class="form" method="post">
+  <label for="login">Login:</label>
+  <input type="text" name="login" id="login" placeholder="login">
 
   <label for="pass">Password:</label>
-  <input type="text" id="pass">
+  <input type="text" name="password" id="pass" placeholder="password">
+
+  <input type="submit">
 </form>
+
+
+<? if (isset($pageData['error'])): ?>
+   <?= $pageData['error']; ?>
+<? else: ?>
+  <p>All done</p>
+<? endif ?>
 
 
 <script src="/js/bootstrap.js"></script>

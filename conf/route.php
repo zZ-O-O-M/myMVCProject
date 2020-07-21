@@ -18,6 +18,7 @@ class Routing {
       include CONTROLLER_PATH . $controllerName . ".php";
       include MODEL_PATH . $modelName . ".php";
 
+//      check action name
       if (isset($route[2])) {
          $actionName = $route[2];
       }
@@ -26,7 +27,7 @@ class Routing {
       $controller->$actionName();
    }
 
-   public function errorPage(){
+   public function errorPage() {
 
    }
 }
