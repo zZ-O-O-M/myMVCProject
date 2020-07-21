@@ -10,7 +10,7 @@ class Routing {
       $route = explode("/", $_SERVER['REQUEST_URI']);
 
 //      check controller
-      if ($route[1] != '') {
+      if ($route[1] !== '') {
          $controllerName = ucfirst($route[1] . 'Controller');
          $modelName = ucfirst($route[1] . "Model");
       }

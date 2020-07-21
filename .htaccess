@@ -1,0 +1,16 @@
+RewriteEngine on
+
+# отмена переписывание url адреса для всех адресов, которые являются прямыми попаданиями в конкретный файл
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule .* index.php?
+
+Options -Indexes
+
+<FilesMatch "\.(php)$">
+    Deny from all
+</FilesMatch>
+
+<FilesMatch "index.(php)$">
+    Allow from all
+</FilesMatch>
