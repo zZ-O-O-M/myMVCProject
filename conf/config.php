@@ -14,3 +14,5 @@ require_once("route.php");
 require_once MODEL_PATH . 'Model.php';
 require_once VIEW_PATH . 'View.php';
 require_once CONTROLLER_PATH . 'Controller.php';
+
+Routing::buildRoute();
